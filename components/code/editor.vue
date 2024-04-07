@@ -31,10 +31,11 @@ const options = computed<monaco.editor.IStandaloneEditorConstructionOptions>(
     ref="container"
     v-model="code"
     h-full
+    max-w="1/2"
     :lang="language"
     :options="options"
   >
-    <div flex="~ col gap-2" h-full w-full items-center justify-center>
+    <div flex="~ col gap-2" h-full items-center justify-center>
       <div i-ri:loader-2-line animate-spin text-4xl />
       <span text-lg>Loading...</span>
     </div>
