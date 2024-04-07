@@ -4,11 +4,15 @@ import wasm from "vite-plugin-wasm"
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@unocss/nuxt"],
+  modules: ["@unocss/nuxt", "@nuxtjs/color-mode"],
 
   css: ["@unocss/reset/tailwind.css", "~/assets/main.css"],
 
   vite: {
     plugins: [wasm()],
+  },
+
+  colorMode: {
+    storageKey: "vueuse-color-scheme",
   },
 })
