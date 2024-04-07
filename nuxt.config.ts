@@ -4,7 +4,7 @@ import wasm from "vite-plugin-wasm"
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@unocss/nuxt", "@nuxtjs/color-mode"],
+  modules: ["@unocss/nuxt", "@nuxtjs/color-mode", "nuxt-monaco-editor"],
 
   css: ["@unocss/reset/tailwind.css", "~/assets/main.css"],
 

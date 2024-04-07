@@ -27,6 +27,8 @@
     "@unocss/nuxt": "^0.59.0",
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
+    "monaco-editor": "^0.47.0",
+    "nuxt-monaco-editor": "^1.2.7",
     "prettier": "^3.2.5",
     "simple-git-hooks": "^2.11.1",
     "taze": "^0.13.3",
