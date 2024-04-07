@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { dumpASTNodes } from "ag-wasm/bundler"
+import { dumpASTNodes } from "ag-wasm"
 import { code } from "#imports"
 
 const { init, setupParser } = useAgWasm()

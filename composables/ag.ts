@@ -1,7 +1,7 @@
-import {
+import initAg, {
   initializeTreeSitter,
   setupParser as setupAgParser,
-} from "ag-wasm/bundler"
+} from "ag-wasm"
 
 const parserPaths: Record<string, string> = {
   javascript: "tree-sitter-javascript.wasm",
@@ -29,6 +29,7 @@ const parserPaths: Record<string, string> = {
 
 export const useAgWasm = () => {
   const init = async () => {
+    await initAg()
     await initializeTreeSitter()
   }
 

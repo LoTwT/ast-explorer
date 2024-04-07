@@ -10,6 +10,11 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [wasm()],
+
+    optimizeDeps: {
+      include: ["ag-wasm > web-tree-sitter-wasm-bindgen"],
+      exclude: ["ag-wasm"],
+    },
   },
 
   colorMode: {
