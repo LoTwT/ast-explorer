@@ -28,14 +28,16 @@ watch(
 </script>
 
 <template>
-  <TreeNode
-    v-if="root"
-    :node="root"
-    :show-unnamed="true"
-    :cursor-position="{
-      row: 0,
-      column: 0,
-    }"
-  />
-  <div v-else>no data</div>
+  <div>
+    <TreeNode
+      v-if="root"
+      :node="root"
+      :show-unnamed="true"
+      :cursor-position="{
+        row: 0,
+        column: 0,
+      }"
+    />
+    <div v-else>no data</div>
+  </div>
 </template>

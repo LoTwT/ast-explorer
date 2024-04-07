@@ -1,3 +1,9 @@
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 body {
   --ayingott-bg-color: #fff;
   --ayingott-color: rgba(0, 0, 0, 0.8);
@@ -8,7 +14,7 @@ body {
 }
 
 .dark-mode body {
-  --ayingott-bg-color: #1b1b1f;
+  --ayingott-bg-color: #1e1e1e;
   --ayingott-color: #ebf4f1;
 }
 
