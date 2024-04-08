@@ -23,7 +23,7 @@ watch(
   () => {
     root.value = dumpASTNodes(code.value)
   },
-  // { immediate: true },
+  { immediate: true },
 )
 </script>
 

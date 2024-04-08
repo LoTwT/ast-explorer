@@ -31,6 +31,7 @@ export const useAgWasm = () => {
   const init = async () => {
     await initAg()
     await initializeTreeSitter()
+    await setupParser(language.value)
   }
 
   const setupParser = async (lang: string) => {
