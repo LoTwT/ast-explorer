@@ -30,8 +30,6 @@ const options = computed<monaco.editor.IStandaloneEditorConstructionOptions>(
   <MonacoEditor
     ref="container"
     v-model="code"
-    h-full
-    max-w="1/2"
     :lang="language"
     :options="options"
   >
