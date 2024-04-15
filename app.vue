@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { code } from "#imports"
-
 const { isColLayout } = useLayout()
 </script>
 
@@ -16,9 +14,8 @@ const { isColLayout } = useLayout()
     >
       <Suspense>
         <CodeEditor
-          v-model="code"
-          flex-1
           :class="[isColLayout ? 'max-w-1/2 h-full' : 'w-full max-h-1/2']"
+          flex-1
           :language="language"
         />
         <template #fallback>Editor Loading...</template>

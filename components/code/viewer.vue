@@ -7,6 +7,7 @@ const { init, setupParser } = useAgWasm()
 await init()
 
 const root = ref<DumpNode>()
+const showFullTree = ref(false)
 
 watch(
   () => language.value,
@@ -25,18 +26,37 @@ watch(
   },
   { immediate: true },
 )
+
+const enterViewer = () => {
+  cursorPostion.value = null
+}
+
+const leaveViewer = () => {
+  highlights.value = []
+}
 </script>
 
 <template>
   <div>
+    <div mb-2 flex px-4>
+      <label for="showFullTree" flex items-center justify-center>
+        <input
+          id="showFullTree"
+          v-model="showFullTree"
+          size-4
+          type="checkbox"
+        />
+        <span ml-2>Show Full Tree</span>
+      </label>
+    </div>
+
     <TreeNode
       v-if="root"
       :node="root"
-      :show-unnamed="true"
-      :cursor-position="{
-        row: 0,
-        column: 0,
-      }"
+      :show-unnamed="showFullTree"
+      :cursor-position="cursorPostion"
+      @mouseenter="enterViewer"
+      @mouseleave="leaveViewer"
     />
     <div v-else>no data</div>
   </div>

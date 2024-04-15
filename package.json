@@ -14,6 +14,7 @@
     "up": "taze latest -I -f"
   },
   "dependencies": {
+    "@ayingott/sucrose": "^0.0.37",
     "@unocss/reset": "^0.59.0",
     "ag-wasm": "^0.0.13",
     "nuxt": "^3.11.2",

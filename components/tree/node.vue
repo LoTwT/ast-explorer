@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { showToast } from "../toast.vue"
+import type { Nullable } from "@ayingott/sucrose"
 
 const props = withDefaults(
   defineProps<{
@@ -15,8 +16,10 @@ const props = withDefaults(
 type DestructedNode = {
   [K in keyof DumpNode]: ComputedRef<DumpNode[K]>
 }
+
 function deepReactive(): DestructedNode {
   const keys = Object.keys(props.node)
+  // @ts-expect-error unresolved
   const entries = keys.map((k) => [k, computed(() => props.node[k])])
   return Object.fromEntries(entries)
 }
@@ -24,11 +27,9 @@ function deepReactive(): DestructedNode {
 const expanded = ref(true)
 const { field, kind, start, end, children, isNamed } = deepReactive()
 
-const highlightContext = inject(highlightKey)
-
 function highlightNode() {
   const { start, end } = props.node
-  highlightContext?.([start.row, start.column, end.row, end.column])
+  highlights.value = [[start.row, start.column, end.row, end.column]]
 }
 
 function withinPos({ start, end }: DumpNode, { row, column }: Pos) {
@@ -52,11 +53,12 @@ const isTarget = computed(() => {
   const { node, cursorPosition } = props
   const isTarget =
     !expanded.value || // children not expanded, current target is the target
-    !node.children.some((n) => withinPos(n, cursorPosition)) // no children within node
+    (!!cursorPosition &&
+      !node.children.some((n) => withinPos(n, cursorPosition))) // no children within node
   return isTarget
 })
 
-const nodeRef = ref(null)
+const nodeRef = ref<Nullable<HTMLDivElement>>(null)
 watchEffect(() => {
   if (isTarget.value) {
     nodeRef.value?.scrollIntoView({
@@ -121,7 +123,7 @@ function copyField(name: string) {
   --green: #008000;
   --black: #002b36;
 }
-html.dark .tree-node {
+html.dark-mode .tree-node {
   --yellow: #ce9178;
   --red: #f48771;
   --blue: #569cd6;

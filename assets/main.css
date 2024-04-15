@@ -5,17 +5,33 @@
 }
 
 body {
-  --ayingott-bg-color: #fff;
-  --ayingott-color: rgba(0, 0, 0, 0.8);
-
   background-color: var(--ayingott-bg-color);
   color: var(--ayingott-color);
   --uno: font-sans;
+
+  --ayingott-bg-color: #fff;
+  --ayingott-color: rgba(0, 0, 0, 0.8);
+
+  --brand-color: #3e6991;
+  --theme-highlight1: #918623;
+  --theme-highlight2: #baac2d;
+  --theme-highlight3: #ffe91091;
+  --theme-highlight4: #fcf1ab30;
+
+  --vp-c-divider: #e2e2e3;
 }
 
 .dark-mode body {
   --ayingott-bg-color: #1e1e1e;
   --ayingott-color: #ebf4f1;
+
+  --brand-color: #918623;
+  --theme-highlight1: #3e6991;
+  --theme-highlight2: #baac2d;
+  --theme-highlight3: #a79b2a47;
+  --theme-highlight4: #a8a17024;
+
+  --vp-c-divider: #2e2e32;
 }
 
 ::view-transition-old(root),

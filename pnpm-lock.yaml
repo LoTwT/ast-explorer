@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ayingott/sucrose':
+    specifier: ^0.0.37
+    version: 0.0.37
   '@unocss/reset':
     specifier: ^0.59.0
     version: 0.59.0
@@ -238,7 +241,6 @@ packages:
     dependencies:
       dotenv: 16.4.5
       dotenv-expand: 11.0.6
-    dev: true
 
   /@babel/code-frame@7.24.2:
     resolution: {integrity: sha512-y5+tLQyV8pg3fsiln67BVLD1P13Eg4lh5RW9mF0zUuvLrv9uIQ4MCL+CRT+FTsBlBjcIan6PGsLcBN0m3ClUyQ==}
@@ -3811,7 +3813,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       dotenv: 16.4.5
-    dev: true
 
   /dotenv@16.4.5:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
