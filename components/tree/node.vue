@@ -83,6 +83,7 @@ function copyField(name: string) {
     ref="nodeRef"
     class="tree-node"
     :class="{ target: isTarget }"
+    w-max
   >
     <p
       class="click-area"

@@ -51,7 +51,7 @@ const leaveViewer = () => {
       </label>
     </div>
 
-    <div v-if="root" flex-1 overflow-auto>
+    <div v-if="root" flex-1 overflow-auto pb-8 pr-4>
       <TreeNode
         :node="root"
         :show-unnamed="showFullTree"
