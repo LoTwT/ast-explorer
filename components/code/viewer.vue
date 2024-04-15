@@ -38,7 +38,7 @@ const leaveViewer = () => {
 </script>
 
 <template>
-  <div>
+  <div flex flex-col overflow-hidden>
     <div mb-2 flex px-4>
       <label for="showFullTree" flex items-center justify-center>
         <input
@@ -51,14 +51,15 @@ const leaveViewer = () => {
       </label>
     </div>
 
-    <TreeNode
-      v-if="root"
-      :node="root"
-      :show-unnamed="showFullTree"
-      :cursor-position="cursorPostion"
-      @mouseenter="enterViewer"
-      @mouseleave="leaveViewer"
-    />
+    <div v-if="root" flex-1 overflow-auto>
+      <TreeNode
+        :node="root"
+        :show-unnamed="showFullTree"
+        :cursor-position="cursorPostion"
+        @mouseenter="enterViewer"
+        @mouseleave="leaveViewer"
+      />
+    </div>
     <div v-else>no data</div>
   </div>
 </template>
