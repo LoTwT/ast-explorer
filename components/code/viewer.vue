@@ -13,6 +13,7 @@ watch(
   () => language.value,
   async () => {
     await setupParser(language.value)
+    root.value = dumpASTNodes(code.value)
   },
   {
     immediate: true,

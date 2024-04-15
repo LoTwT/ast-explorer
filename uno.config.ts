@@ -10,7 +10,12 @@ import {
 } from "unocss"
 
 export default defineConfig({
-  shortcuts: [],
+  shortcuts: {
+    "border-base": "border-$c-border",
+    "border-bg-base": "border-$c-bg-base",
+    "bg-base": "bg-$c-bg-base",
+    "text-base": "text-$c-text-base",
+  },
   presets: [
     presetUno({
       dark: {

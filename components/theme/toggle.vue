@@ -70,6 +70,6 @@ function toggleDark(event: MouseEvent) {
 
 <template>
   <div cursor-pointer @click="toggleDark">
-    <div dark="i-carbon-moon" i-carbon-sun />
+    <div dark="i-carbon-moon" i-carbon-sun important-size-5 />
   </div>
 </template>

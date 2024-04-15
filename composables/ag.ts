@@ -3,7 +3,7 @@ import initAg, {
   setupParser as setupAgParser,
 } from "ag-wasm"
 
-const parserPaths: Record<string, string> = {
+const parserPaths = {
   javascript: "tree-sitter-javascript.wasm",
   typescript: "tree-sitter-typescript.wasm",
   tsx: "tree-sitter-tsx.wasm",
@@ -27,6 +27,8 @@ const parserPaths: Record<string, string> = {
   swift: "tree-sitter-swift.wasm",
 }
 
+export type Language = keyof typeof parserPaths
+
 export const useAgWasm = () => {
   const init = async () => {
     await initAg()
@@ -34,7 +36,7 @@ export const useAgWasm = () => {
     await setupParser(language.value)
   }
 
-  const setupParser = async (lang: string) => {
+  const setupParser = async (lang: Language) => {
     const path = parserPaths[lang]
     await setupAgParser(lang, path)
   }

@@ -11,7 +11,12 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
   ],
 
-  css: ["@unocss/reset/tailwind.css", "~/assets/main.css"],
+  css: [
+    "@unocss/reset/tailwind.css",
+    "floating-vue/dist/style.css",
+    "~/assets/styles/main.css",
+    "~/assets/styles/dropdown.css",
+  ],
 
   vite: {
     plugins: [
