@@ -18,6 +18,19 @@ export default defineNuxtConfig({
     "~/assets/styles/dropdown.css",
   ],
 
+  app: {
+    head: {
+      title: "AST Explorer",
+      link: [
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          href: "/logo.svg",
+        },
+      ],
+    },
+  },
+
   vite: {
     plugins: [
       // wasm()

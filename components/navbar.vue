@@ -9,7 +9,7 @@ const changeLayout = (v: EditorLayouts) => {
 <template>
   <header mb-2 flex items-center justify-between px-4 py-2>
     <div flex items-center>
-      <h1 mr-4>AST Explorer</h1>
+      <h1 mr-4 font-bold>AST Explorer</h1>
 
       <LanguageSelect />
     </div>
