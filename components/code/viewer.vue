@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { dumpASTNodes } from "ag-wasm"
-import { code } from "#imports"
+import { code, showQuery } from "#imports"
 
 const { init, setupParser } = useAgWasm()
 
@@ -39,15 +39,20 @@ const leaveViewer = () => {
 
 <template>
   <div flex flex-col overflow-hidden>
-    <div mb-2 flex px-4>
-      <label for="showFullTree" flex items-center justify-center>
+    <div mb-2 flex gap-4 px-4>
+      <label for="showFullTree" flex cursor-pointer items-center justify-center>
         <input
           id="showFullTree"
           v-model="showFullTree"
           size-4
           type="checkbox"
         />
-        <span ml-2>Show Full Tree</span>
+        <span ml-1>Show Full Tree</span>
+      </label>
+
+      <label for="showQuery" flex cursor-pointer items-center>
+        <input id="showQuery" v-model="showQuery" size-4 type="checkbox" />
+        <span ml-1>Query</span>
       </label>
     </div>
 

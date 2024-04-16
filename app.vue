@@ -13,11 +13,24 @@ const { isColLayout } = useLayout()
       :class="[isColLayout ? 'flex-row' : 'flex-col']"
     >
       <Suspense>
-        <CodeEditor
-          :class="[isColLayout ? 'max-w-1/2 h-full' : 'w-full max-h-1/2']"
+        <div
+          :class="[
+            isColLayout
+              ? 'max-w-1/2 h-full flex-col'
+              : 'w-full max-h-1/2 flex-row',
+          ]"
+          flex
           flex-1
-          :language="language"
-        />
+        >
+          <CodeEditor
+            flex-1
+            :class="{
+              'w-1/2': showQuery && !isColLayout,
+              'h-1/2': showQuery && isColLayout,
+            }"
+          />
+          <CodeQuery v-if="showQuery" flex-1 />
+        </div>
         <template #fallback>Editor Loading...</template>
       </Suspense>
 
