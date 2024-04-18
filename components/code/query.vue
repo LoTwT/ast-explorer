@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { query } from "#imports"
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import type { MonacoEditor } from "#build/components"
 
 const container = shallowRef<InstanceType<typeof MonacoEditor>>()

@@ -15,32 +15,32 @@
   },
   "dependencies": {
     "@ayingott/sucrose": "^0.0.37",
-    "@unocss/reset": "^0.59.0",
+    "@unocss/reset": "^0.59.3",
     "ag-wasm": "^0.0.13",
     "nuxt": "^3.11.2",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.1"
   },
   "devDependencies": {
-    "@ayingott/eslint-config": "^0.8.3",
-    "@ayingott/prettier-config": "^0.2.2",
+    "@ayingott/eslint-config": "^0.9.0",
+    "@ayingott/prettier-config": "^0.3.0",
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/ri": "^1.1.20",
     "@iconify-json/vscode-icons": "^1.1.33",
-    "@nuxtjs/color-mode": "^3.3.3",
-    "@unocss/nuxt": "^0.59.0",
+    "@nuxtjs/color-mode": "^3.4.0",
+    "@unocss/nuxt": "^0.59.3",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "floating-vue": "^5.2.2",
     "lint-staged": "^15.2.2",
     "monaco-editor": "^0.47.0",
     "nuxt-monaco-editor": "^1.2.7",
     "prettier": "^3.2.5",
     "simple-git-hooks": "^2.11.1",
-    "taze": "^0.13.3",
-    "unocss": "^0.59.0",
+    "taze": "^0.13.6",
+    "unocss": "^0.59.3",
     "vite-plugin-wasm": "^3.3.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.23"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"

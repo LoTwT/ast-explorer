@@ -2,7 +2,6 @@
 import { code } from "#imports"
 import type * as Monaco from "monaco-editor"
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import type { MonacoEditor } from "#build/components"
 
 const monaco = useMonaco()!
